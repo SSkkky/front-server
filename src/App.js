@@ -24,9 +24,9 @@ function App() {
   const onSaveHandler = () => {
     let params = null;
     if (elInput.current.value === '') return;
-    console.log(alter)
+    // console.log(alter, ': alter')
 
-    if (alter.id !== '') { //id 있음
+    if (alter.id !== undefined) { //id 있음
       params = { id: String(alter.id), name: elInput.current.value }
       putData(params);
       setAlter('');
