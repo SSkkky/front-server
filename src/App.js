@@ -5,7 +5,7 @@ import './common.scss';
 
 function App() {
   const elInput = useRef();
-  const [alter, setAlter] = useState('')
+  const [alter, setAlter] = useState('');
   const { data, getData, postData, putData, deleteData, status } = useStore();
 
   useEffect(() => {
