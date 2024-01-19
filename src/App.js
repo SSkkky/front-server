@@ -29,6 +29,7 @@ function App() {
     if (alter.id !== '') { //id 있음
       params = { id: String(alter.id), name: elInput.current.value }
       putData(params);
+      setAlter('');
     } else {
       params = { id: (new Date).getTime(), name: elInput.current.value }
       postData(params);
@@ -60,7 +61,7 @@ function App() {
   return (
     <div className="App">
       <article className='write'>
-        <input type="text" ref={elInput} />
+        <input type="text" ref={elInput} placeholder='입력해주세요' />
         <button onClick={() => { onSaveHandler() }}>저장</button>
       </article>
 
